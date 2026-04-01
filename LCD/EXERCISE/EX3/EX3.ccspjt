@@ -1,0 +1,22 @@
+[PROJECT]
+Target=EX3.hex
+Processor_Text=PIC16F887
+CCSVersion=5.051
+Compiler=PCM
+[Target Data]
+FileList=EX3.c
+[EX3.c]
+Type=4
+[mru-list]
+1=EX3.c
+
+[defines]
+buildcount=2
+
+[Opened Files]
+1=EX3.c
+t1=9
+Count=1
+[Units]
+Count=1
+1=EX3 (main)

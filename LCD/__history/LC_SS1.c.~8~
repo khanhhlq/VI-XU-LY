@@ -20,10 +20,10 @@ setup_adc_ports(NO_ANALOGS);
    LCD_INIT();
    
    WHILE(TRUE){
-      LCD_GOTOXY(7,1);
+      LCD_GOTOXY(1,1);
       LCD_PUTC("MOI");
       DELAY_MS(500);
-      LCD_GOTOXY(7,1);
+      LCD_GOTOXY(1,1);
       LCD_PUTC("   ");
       DELAY_MS(500);
    }

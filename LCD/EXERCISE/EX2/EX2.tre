@@ -1,5 +1,5 @@
-юдLC_SS1
-   юдMAIN  0/79  Ram=1
+юдEX2
+   юдMAIN  0/78  Ram=0
       цд@cinit1  (Inline)  Ram=0
       цдlcd_init  0/70  Ram=6
       Ё  цд@delay_ms1  0/20  Ram=1
@@ -16,7 +16,7 @@
       цдlcd_gotoxy  0/18  Ram=4
       Ё  юдlcd_send_byte  0/94  Ram=3
       Ё     юд*
-      цд@PSTRINGC7_624  0/86  Ram=4
+      цд@PSTRINGCN7_624  0/87  Ram=5
       Ё  цдlcd_putc  0/44  Ram=1
       Ё  Ё  цдlcd_gotoxy  0/18  Ram=4
       Ё  Ё  Ё  юд*
@@ -31,9 +31,19 @@
       Ё  Ё     юд*
       Ё  юдlcd_putc  0/44  Ram=1
       Ё     юд*
-      цд@delay_ms1  0/20  Ram=1
+      цд@PRINTF_U_624  0/55  Ram=2
+      Ё  цд@DIV88  0/21  Ram=3
+      Ё  цдlcd_putc  0/44  Ram=1
+      Ё  Ё  юд*
+      Ё  цд@DIV88  0/21  Ram=3
+      Ё  цдlcd_putc  0/44  Ram=1
+      Ё  Ё  юд*
+      Ё  юдlcd_putc  0/44  Ram=1
+      Ё     юд*
       цдlcd_gotoxy  0/18  Ram=4
       Ё  юд*
-      цд@PSTRINGC7_624  0/86  Ram=4
+      цд@PSTRINGCN7_624  0/87  Ram=5
       Ё  юд*
-      юд@delay_ms1  0/20  Ram=1
+      юд@PRINTF_LU_624  0/101  Ram=9
+         юдlcd_putc  0/44  Ram=1
+            юд*

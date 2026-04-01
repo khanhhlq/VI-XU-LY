@@ -11,20 +11,18 @@
 #define LCD_DATA7       PIN_D7
 
 #INCLUDE <LCD.C>
-  
+
 VOID MAIN(){
-setup_adc_ports(NO_ANALOGS);
    SET_TRIS_D(0);
    SET_TRIS_E(0);
    
    LCD_INIT();
    
    WHILE(TRUE){
-      LCD_GOTOXY(7,1);
-      LCD_PUTC("MOI");
-      DELAY_MS(500);
-      LCD_GOTOXY(7,1);
-      LCD_PUTC("   ");
-      DELAY_MS(500);
+      LCD_GOTOXY(1,1);
+      LCD_PUTC("I LOVE YOU");
+      LCD_GOTOXY(8,2);
+      LCD_PUTC("CHU CO MO");
    }
 }
+

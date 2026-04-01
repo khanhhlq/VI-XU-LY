@@ -1,0 +1,34 @@
+[PROJECT]
+Target=EX1.hex
+Processor_Text=PIC16F887
+CCSVersion=5.051
+Compiler=PCM
+[Target Data]
+FileList=EX1.c
+[EX1.c]
+Type=4
+[mru-list]
+1=EX1.c
+
+[defines]
+buildcount=6
+
+[Opened Files]
+1=..\..\..\Overview of PIC 16F887\LEDCHOPTAT.c
+t1=41
+2=..\LCD\LC_SS1.c
+t2=1
+3=EX1.c
+t3=1
+Count=4
+4=..\EX2\EX2.c
+t4=1
+[Units]
+Count=1
+1=EX1 (main)
+
+[ProjectLog]
+Days=1
+D1=01-04-2026
+D1_L=1
+D1_L1=[61547]Project Closed.

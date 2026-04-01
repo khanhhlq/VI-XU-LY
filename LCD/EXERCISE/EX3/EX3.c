@@ -11,20 +11,25 @@
 #define LCD_DATA7       PIN_D7
 
 #INCLUDE <LCD.C>
-  
+
+UNSIGNED INT8 X = 2;
+UNSIGNED INT8 YZ = 32;
+
 VOID MAIN(){
-setup_adc_ports(NO_ANALOGS);
    SET_TRIS_D(0);
    SET_TRIS_E(0);
    
    LCD_INIT();
    
    WHILE(TRUE){
-      LCD_GOTOXY(7,1);
-      LCD_PUTC("MOI");
-      DELAY_MS(500);
-      LCD_GOTOXY(7,1);
-      LCD_PUTC("   ");
-      DELAY_MS(500);
+      LCD_GOTOXY(1,1);
+      PRINTF(LCD_PUTC, "PHONG SO:      %01U", X);
+      LCD_GOTOXY(1,2);
+      PRINTF(LCD_PUTC, "NHIET DO:   %02U", YZ);
+      LCD_GOTOXY(15,2);
+      LCD_PUTC(0XDF);
+      LCD_PUTC('C');
+      
    }
 }
+

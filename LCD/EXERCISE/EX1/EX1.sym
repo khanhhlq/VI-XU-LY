@@ -8,7 +8,6 @@
 01C     CCP_2_HIGH
 020-021 @sprintf_string
 022     lcd_init.i
-022     MAIN.@SCRATCH1
 022     @PSTRINGC7_624.@SCRATCH1
 023-026 lcd_init.LCD_INIT_STRING
 023     @PSTRINGC7_624.@SCRATCH2
@@ -42,35 +41,35 @@
 
 ROM Allocation:
 000004  @const639.call
-000006  @const644.call
-000008  @delay_ms1
-00001C  lcd_send_nibble
-00004A  lcd_read_nibble
-00007B  lcd_send_byte
-000083  lcd_read_byte
-0000D9  lcd_init
-00011F  lcd_gotoxy
-000131  lcd_putc
-00015D  @PSTRINGC7_624
-0001B3  @cinit1
-0001B3  MAIN
-0001C7  @cinit2
+00000A  @const644.call
+00000F  @delay_ms1
+000023  lcd_send_nibble
+000051  lcd_read_nibble
+000082  lcd_send_byte
+00008A  lcd_read_byte
+0000E0  lcd_init
+000126  lcd_gotoxy
+000138  lcd_putc
+000164  @PSTRINGC7_624
+0001BA  @cinit1
+0001BA  MAIN
+0001CE  @cinit2
 
 Project Directory:
-    D:\VI-XU-LY\LCD\
+    D:\VI-XU-LY\LCD\EXERCISE\EX1\
 
 Project Files:
-    LC_SS1.c                                                [01-Apr-26 16:44  CRC=7BC4794A]
+    EX1.c                                                   [01-Apr-26 16:57  CRC=6CC6BB02]
     C:\Program Files (x86)\PICC\Devices\16F887.H            [22-Oct-15 10:30  CRC=E224733F]
     C:\Program Files (x86)\PICC\Drivers\LCD.C               [19-Sep-13 16:38  CRC=D1A6378A]
 
-Source signature=01355B9D
+Source signature=F2379D55
 Program memory checksum=0000
 Program memory CRC=0000
-Hex file CRC=E4C2
+Hex file CRC=49E7
 
 Units:
-    LC_SS1 (main)
+    EX1 (main)
 
 Compiler Settings:
     Processor:      PIC16F887
@@ -82,13 +81,13 @@ Compiler Settings:
     Compile Mode:       CCS5
 
 Output Files:
-    XREF file:   LC_SS1.xsym
-    Errors:      LC_SS1.err
-    Ext Symbols: LC_SS1.esym
-    INHX8:       LC_SS1.hex
-    Symbols:     LC_SS1.sym
-    List:        LC_SS1.lst
-    Debug/COFF:  LC_SS1.cof
-    Project:     LC_SS1.ccspjt
-    Call Tree:   LC_SS1.tre
-    Statistics:  LC_SS1.STA
+    XREF file:   EX1.xsym
+    Errors:      EX1.err
+    Ext Symbols: EX1.esym
+    INHX8:       EX1.hex
+    Symbols:     EX1.sym
+    List:        EX1.lst
+    Debug/COFF:  EX1.cof
+    Project:     EX1.ccspjt
+    Call Tree:   EX1.tre
+    Statistics:  EX1.STA

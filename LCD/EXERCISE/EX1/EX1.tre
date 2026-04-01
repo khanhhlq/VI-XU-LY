@@ -1,5 +1,5 @@
-юдLC_SS1
-   юдMAIN  0/79  Ram=1
+юдEX1
+   юдMAIN  0/56  Ram=0
       цд@cinit1  (Inline)  Ram=0
       цдlcd_init  0/70  Ram=6
       Ё  цд@delay_ms1  0/20  Ram=1
@@ -31,9 +31,7 @@
       Ё  Ё     юд*
       Ё  юдlcd_putc  0/44  Ram=1
       Ё     юд*
-      цд@delay_ms1  0/20  Ram=1
       цдlcd_gotoxy  0/18  Ram=4
       Ё  юд*
-      цд@PSTRINGC7_624  0/86  Ram=4
-      Ё  юд*
-      юд@delay_ms1  0/20  Ram=1
+      юд@PSTRINGC7_624  0/86  Ram=4
+         юд*
