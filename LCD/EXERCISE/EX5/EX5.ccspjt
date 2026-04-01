@@ -1,0 +1,32 @@
+[PROJECT]
+Target=EX5.hex
+Processor_Text=PIC16F887
+CCSVersion=5.051
+Compiler=PCM
+[Target Data]
+FileList=EX5.c
+[EX5.c]
+Type=4
+[mru-list]
+1=EX5.c
+
+[defines]
+buildcount=8
+
+[Opened Files]
+1=..\EX4\EX4.c
+t1=1
+2=EX5.c
+t2=1
+Count=2
+
+[ProjectLog]
+Days=1
+D1=01-04-2026
+D1_L=3
+D1_L1=[63501]Started Editing.
+D1_L2=[64281]Stopped Editing.
+D1_L3=[64291]Started Editing.
+[Units]
+Count=1
+1=EX5 (main)

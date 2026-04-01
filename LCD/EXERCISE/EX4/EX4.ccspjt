@@ -1,28 +1,30 @@
 [PROJECT]
-Target=EX3.hex
+Target=EX4.hex
 Processor_Text=PIC16F887
 CCSVersion=5.051
 Compiler=PCM
 [Target Data]
-FileList=EX3.c
-[EX3.c]
+FileList=EX4.c
+[EX4.c]
 Type=4
 [mru-list]
-1=EX3.c
+1=EX4.c
 
 [defines]
-buildcount=2
+buildcount=5
 
 [Opened Files]
-1=..\EX4\EX4.c
+1=EX4.c
 t1=1
-Count=1
+Count=2
+2=..\EX5\EX5.c
+t2=1
 [Units]
 Count=1
-1=EX3 (main)
+1=EX4 (main)
 
 [ProjectLog]
 Days=1
 D1=01-04-2026
 D1_L=1
-D1_L1=[62959]Project Closed.
+D1_L1=[63435]Project Closed.
