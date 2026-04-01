@@ -1,10 +1,10 @@
-CCS PCM C Compiler, Version 5.051, 43599               01-Apr-26 18:21
+CCS PCM C Compiler, Version 5.051, 43599               01-Apr-26 18:32
 
                Filename:   D:\VI-XU-LY\LCD\EXERCISE\EX5\EX5.lst
 
-               ROM used:   609 words (7%)
+               ROM used:   613 words (7%)
                            Largest free fragment is 2048
-               RAM used:   10 (3%) at main() level
+               RAM used:   11 (3%) at main() level
                            24 (7%) worst case
                Stack used: 5 locations
                Stack size: 8
@@ -122,7 +122,7 @@ CCS PCM C Compiler, Version 5.051, 43599               01-Apr-26 18:21
 01B5:  BCF    03.6
 01B6:  BCF    0A.3
 01B7:  BCF    0A.4
-01B8:  GOTO   241 (RETURN)
+01B8:  GOTO   245 (RETURN)
 01B9:  MOVF   28,W
 01BA:  CLRF   78
 01BB:  SUBWF  27,W
@@ -1084,92 +1084,96 @@ CCS PCM C Compiler, Version 5.051, 43599               01-Apr-26 18:21
 ....................   WHILE(TRUE){ 
 ....................      GIAY++; 
 0222:  INCF   22,F
-....................      DELAY_MS(200); 
-0223:  MOVLW  C8
-0224:  MOVWF  2A
-0225:  CALL   00C
+....................      DELAY_MS(1000); 
+0223:  MOVLW  04
+0224:  MOVWF  25
+0225:  MOVLW  FA
+0226:  MOVWF  2A
+0227:  CALL   00C
+0228:  DECFSZ 25,F
+0229:  GOTO   225
 ....................       
 ....................      IF (GIAY > 59){ 
-0226:  MOVF   22,W
-0227:  SUBLW  3B
-0228:  BTFSC  03.0
-0229:  GOTO   22C
+022A:  MOVF   22,W
+022B:  SUBLW  3B
+022C:  BTFSC  03.0
+022D:  GOTO   230
 ....................         PHUT++; 
-022A:  INCF   21,F
+022E:  INCF   21,F
 ....................         GIAY = 0; 
-022B:  CLRF   22
+022F:  CLRF   22
 ....................      } 
 ....................       
 ....................      IF (PHUT > 59){ 
-022C:  MOVF   21,W
-022D:  SUBLW  3B
-022E:  BTFSC  03.0
-022F:  GOTO   232
+0230:  MOVF   21,W
+0231:  SUBLW  3B
+0232:  BTFSC  03.0
+0233:  GOTO   236
 ....................         GIO++; 
-0230:  INCF   20,F
+0234:  INCF   20,F
 ....................         PHUT = 0; 
-0231:  CLRF   21
+0235:  CLRF   21
 ....................      } 
 ....................       
 ....................      IF (GIO > 24) GIO = 0; 
-0232:  MOVF   20,W
-0233:  SUBLW  18
-0234:  BTFSS  03.0
-0235:  CLRF   20
+0236:  MOVF   20,W
+0237:  SUBLW  18
+0238:  BTFSS  03.0
+0239:  CLRF   20
 ....................       
 ....................      LCD_GOTOXY(1,1); 
-0236:  MOVLW  01
-0237:  MOVWF  29
-0238:  MOVWF  2A
-0239:  CALL   123
+023A:  MOVLW  01
+023B:  MOVWF  29
+023C:  MOVWF  2A
+023D:  CALL   123
 ....................      LCD_PUTC("SECOND COUNTER"); 
-023A:  MOVLW  04
-023B:  BSF    03.6
-023C:  MOVWF  0D
-023D:  MOVLW  00
-023E:  MOVWF  0F
-023F:  BCF    03.6
-0240:  GOTO   161
-....................      LCD_GOTOXY(1,2); 
-0241:  MOVLW  01
-0242:  MOVWF  29
-0243:  MOVLW  02
-0244:  MOVWF  2A
-0245:  CALL   123
+023E:  MOVLW  04
+023F:  BSF    03.6
+0240:  MOVWF  0D
+0241:  MOVLW  00
+0242:  MOVWF  0F
+0243:  BCF    03.6
+0244:  GOTO   161
+....................      LCD_GOTOXY(4,2); 
+0245:  MOVLW  04
+0246:  MOVWF  29
+0247:  MOVLW  02
+0248:  MOVWF  2A
+0249:  CALL   123
 ....................      PRINTF(LCD_PUTC, "%02U", GIO); 
-0246:  MOVF   20,W
-0247:  MOVWF  25
-0248:  MOVLW  01
-0249:  MOVWF  26
-024A:  CALL   1CE
-....................      LCD_GOTOXY(6,2); 
-024B:  MOVLW  06
-024C:  MOVWF  29
-024D:  MOVLW  02
-024E:  MOVWF  2A
-024F:  CALL   123
+024A:  MOVF   20,W
+024B:  MOVWF  25
+024C:  MOVLW  01
+024D:  MOVWF  26
+024E:  CALL   1CE
+....................      LCD_GOTOXY(7,2); 
+024F:  MOVLW  07
+0250:  MOVWF  29
+0251:  MOVLW  02
+0252:  MOVWF  2A
+0253:  CALL   123
 ....................      PRINTF(LCD_PUTC, "%02U", PHUT); 
-0250:  MOVF   21,W
-0251:  MOVWF  25
-0252:  MOVLW  01
-0253:  MOVWF  26
-0254:  CALL   1CE
-....................      LCD_GOTOXY(11,2); 
-0255:  MOVLW  0B
-0256:  MOVWF  29
-0257:  MOVLW  02
-0258:  MOVWF  2A
-0259:  CALL   123
+0254:  MOVF   21,W
+0255:  MOVWF  25
+0256:  MOVLW  01
+0257:  MOVWF  26
+0258:  CALL   1CE
+....................      LCD_GOTOXY(10,2); 
+0259:  MOVLW  0A
+025A:  MOVWF  29
+025B:  MOVLW  02
+025C:  MOVWF  2A
+025D:  CALL   123
 ....................      PRINTF(LCD_PUTC, "%02U", GIAY); 
-025A:  MOVF   22,W
-025B:  MOVWF  25
-025C:  MOVLW  01
-025D:  MOVWF  26
-025E:  CALL   1CE
-025F:  GOTO   222
+025E:  MOVF   22,W
+025F:  MOVWF  25
+0260:  MOVLW  01
+0261:  MOVWF  26
+0262:  CALL   1CE
+0263:  GOTO   222
 ....................   } 
 .................... } 
-0260:  SLEEP
+0264:  SLEEP
 
 Configuration Fuses:
    Word  1: 2FE2   HS NOWDT PUT MCLR NOPROTECT NOCPD BROWNOUT IESO FCMEN NOLVP NODEBUG

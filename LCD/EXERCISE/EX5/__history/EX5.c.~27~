@@ -63,11 +63,11 @@ VOID MAIN(){
      
      LCD_GOTOXY(1,1);
      LCD_PUTC("SECOND COUNTER");
-     LCD_GOTOXY(4,2);
+     LCD_GOTOXY(1,2);
      PRINTF(LCD_PUTC, "%02U", GIO);
-     LCD_GOTOXY(7,2);
+     LCD_GOTOXY(6,2);
      PRINTF(LCD_PUTC, "%02U", PHUT);
-     LCD_GOTOXY(10,2);
+     LCD_GOTOXY(11,2);
      PRINTF(LCD_PUTC, "%02U", GIAY);
   }
 }

@@ -12,6 +12,7 @@
 023-024 @sprintf_string
 025     lcd_init.i
 025     @PRINTF_U_624.P1
+025     MAIN.@SCRATCH1
 025     @PSTRINGC7_624.@SCRATCH1
 026-029 lcd_init.LCD_INIT_STRING
 026     @PRINTF_U_624.P1
@@ -68,14 +69,14 @@ Project Directory:
     D:\VI-XU-LY\LCD\EXERCISE\EX5\
 
 Project Files:
-    EX5.c                                                   [01-Apr-26 18:21  CRC=83463F43]
+    EX5.c                                                   [01-Apr-26 18:32  CRC=0782CF84]
     C:\Program Files (x86)\PICC\Devices\16F887.H            [22-Oct-15 10:30  CRC=E224733F]
     C:\Program Files (x86)\PICC\Drivers\LCD.C               [19-Sep-13 16:38  CRC=D1A6378A]
 
-Source signature=08B72196
+Source signature=8CF3B1D7
 Program memory checksum=0000
 Program memory CRC=0000
-Hex file CRC=ED49
+Hex file CRC=CE50
 
 Units:
     EX5 (main)
