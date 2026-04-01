@@ -53,34 +53,34 @@ ROM Allocation:
 000004  MA7DOAN.call
 000008  MA7DOAN.data
 000012  @const646.call
-00001C  @const655.call
-000026  @delay_ms1
-00003A  lcd_send_nibble
-000068  lcd_read_nibble
-000099  lcd_send_byte
-0000A1  lcd_read_byte
-0000F7  lcd_init
-00013D  lcd_gotoxy
-00014F  lcd_putc
-00017B  @PSTRINGCN7_624
-0001D2  @DIV88
-0001E7  @PRINTF_U_624
-00021C  MAIN
-00021C  @cinit1
-000233  @cinit2
+00001B  @const655.call
+000025  @delay_ms1
+000039  lcd_send_nibble
+000067  lcd_read_nibble
+000098  lcd_send_byte
+0000A0  lcd_read_byte
+0000F6  lcd_init
+00013C  lcd_gotoxy
+00014E  lcd_putc
+00017A  @PSTRINGCN7_624
+0001D1  @DIV88
+0001E6  @PRINTF_U_624
+00021B  MAIN
+00021B  @cinit1
+000232  @cinit2
 
 Project Directory:
     D:\VI-XU-LY\LCD\REVIEW_1\
 
 Project Files:
-    Review_1.c                                              [02-Apr-26 00:03  CRC=7E7341B1]
+    Review_1.c                                              [02-Apr-26 00:08  CRC=8091CA1E]
     C:\Program Files (x86)\PICC\Devices\16F887.H            [22-Oct-15 10:30  CRC=E224733F]
     C:\Program Files (x86)\PICC\Drivers\LCD.C               [19-Sep-13 16:38  CRC=D1A6378A]
 
-Source signature=03E42404
+Source signature=0602AC71
 Program memory checksum=0000
 Program memory CRC=0000
-Hex file CRC=DD01
+Hex file CRC=2627
 
 Units:
     Review_1 (main)

@@ -37,10 +37,13 @@ VOID MAIN(){
    
    WHILE(TRUE){
       LCD_GOTOXY(1,1);
-      PRINTF(LCD_PUTC, "HIEN TAI:     %02U", S_SET);
+      PRINTF(LCD_PUTC, "CAI DAT:     %02U", S_SET);
       LCD_GOTOXY(1,2);
       PRINTF(LCD_PUTC, "HIEN TAI:     %02U", S_DIS);
-   
+      
+      OUTPUT_B(MA7DOAN[S_SET/10]);
+      OUTPUT_C(MA7DOAN[S_SET%10]); 
+      
       IF (!INPUT(ON_OFF)){
          DELAY_MS(20);
          IF (!INPUT(ON_OFF)){
@@ -54,9 +57,7 @@ VOID MAIN(){
             DELAY_MS(20);
             IF (!INPUT(ADJ)){
                S_SET += 5;
-               IF (S_SET > 60) S_SET = 5;
-               OUTPUT_B(MA7DOAN[S_SET/10]);
-               OUTPUT_C(MA7DOAN[S_SET%10]); 
+               IF (S_SET > 60) S_SET = 0;
                WHILE(!INPUT(ADJ));
             }
          }
