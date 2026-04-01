@@ -47,7 +47,6 @@ VOID MAIN(){
    
   WHILE(TRUE){
      GIAY++;
-     DELAY_MS(1000);
      
      IF (GIAY > 59){
         PHUT++;
@@ -64,10 +63,10 @@ VOID MAIN(){
      LCD_GOTOXY(1,1);
      LCD_PUTC("SECOND COUNTER");
      LCD_GOTOXY(1,2);
-     PRINTF(LCD_PUTC, "%02U", GIO);
+     PRINTF(LCD_PUTC, %02U, GIO);
      LCD_GOTOXY(6,2);
-     PRINTF(LCD_PUTC, "%02U", PHUT);
+     PRINTF(LCCD_PUTC, %02U, PHUT);
      LCD_GOTOXY(11,2);
-     PRINTF(LCD_PUTC, "%02U", GIAY);
+     PRINTF(LCD_PUTC, %02U, GIAY);
   }
 }

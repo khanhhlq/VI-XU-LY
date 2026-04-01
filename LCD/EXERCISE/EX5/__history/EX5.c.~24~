@@ -47,7 +47,6 @@ VOID MAIN(){
    
   WHILE(TRUE){
      GIAY++;
-     DELAY_MS(1000);
      
      IF (GIAY > 59){
         PHUT++;
