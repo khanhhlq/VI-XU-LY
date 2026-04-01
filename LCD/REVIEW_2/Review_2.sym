@@ -1,0 +1,70 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+020.0   STATUS
+021     SECOND
+022     @TRIS_C
+023     @DIV88.P1
+023     MAIN.@SCRATCH1
+024     @delay_ms1.P1
+024     @DIV88.P2
+025     @DIV88.@SCRATCH1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+107.6   C1OUT
+108.6   C2OUT
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  MA7DOAN.call
+000008  MA7DOAN.data
+000012  @DIV88
+000027  @delay_ms1
+00003D  @cinit1
+00003D  MAIN
+000053  @cinit2
+
+Project Directory:
+    D:\VI-XU-LY\LCD\REVIEW_2\
+
+Project Files:
+    Review_2.c                                              [02-Apr-26 01:09  CRC=4FB53F16]
+    C:\Program Files (x86)\PICC\Devices\16F887.H            [22-Oct-15 10:30  CRC=E224733F]
+
+Source signature=13FE2594
+Program memory checksum=0000
+Program memory CRC=0000
+Hex file CRC=78F5
+
+Units:
+    Review_2 (main)
+
+Compiler Settings:
+    Processor:      PIC16F887
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    XREF file:   Review_2.xsym
+    Errors:      Review_2.err
+    Ext Symbols: Review_2.esym
+    INHX8:       Review_2.hex
+    Symbols:     Review_2.sym
+    List:        Review_2.lst
+    Debug/COFF:  Review_2.cof
+    Project:     Review_2.ccspjt
+    Call Tree:   Review_2.tre
+    Statistics:  Review_2.STA

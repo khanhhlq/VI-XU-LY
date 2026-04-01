@@ -1,0 +1,54 @@
+#INCLUDE <16F887.H>
+#FUSES HS, PUT, NOWDT, NOLVP, NOPROTECT
+#USE DELAY(CLOCK=20M)
+
+#define START         PIN_E0
+#define STOP         PIN_E1
+
+CONST UNSIGNED CHAR MA7DOAN[10] = {0xC0,0xF9,0xA4,0xB0,0x99,0x92,0x82,0xF8,0x80,0x90}; // mang led 7 doan
+
+
+
+UNSIGNED INT1 STATUS_START = 1;
+UNSIGNED INT1 STATUS_STOP = 1;
+UNSIGNED INT8 SECOND = 0;
+
+VOID MAIN(){
+   SET_TRIS_B(0X00);
+   SET_TRIS_C(0X00);
+   SET_TRIS_E(0XFF);
+
+   OUTPUT_B(MA7DOAN[0]);
+   OUTPUT_C(MA7DOAN[0]);
+   
+   WHILE(TRUE){
+      OUTPUT_B(MA7DOAN[SECOND/10]);
+      OUTPUT_C(MA7DOAN[SECOND%10]);
+      
+      IF(!INPUT(START)){
+         DELAY_MS(20);
+         IF(!INPUT(START)){
+            STATUS_START = ~STATUS_START;
+            WHILE(!INPUT(START));
+         }
+      }
+      
+      IF(!INPUT(STOP)){
+         DELAY_MS(20);
+         IF(!INPUT(STOP)){
+            STATUS_STOP = ~STATUS_STOP;
+            WHILE(!INPUT(STOP));
+         }
+      }
+      
+      IF(!STATUS_START){
+         SECOND++;
+         DELAY_MS(500);
+      }
+      
+      IF(!STATUS_STOP){
+         STATUS_START = ~STATUS_START;
+         SECOND = SECOND;
+      }
+   }
+}

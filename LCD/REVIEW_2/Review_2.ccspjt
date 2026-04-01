@@ -1,0 +1,40 @@
+[PROJECT]
+Target=Review_2.hex
+Processor_Text=PIC16F887
+CCSVersion=5.051
+Compiler=PCM
+[Target Data]
+FileList=Review_2.c
+[Review_2.c]
+Type=4
+[mru-list]
+1=Review_2.c
+
+[defines]
+buildcount=30
+
+[ProjectLog]
+Days=1
+D1=02-04-2026
+D1_L=5
+D1_L1=[1065]Started Editing.
+D1_L2=[3433]Stopped Editing.
+D1_L3=[4140]Started Editing.
+D1_L4=[4203]Stopped Editing.
+TotalEdit=36
+TotalDebug=0
+D1_E=36
+D1_D=0
+D1_L5=[4203]Project Closed.
+
+[Opened Files]
+1=..\REVIEW_1\Review_1.c
+t1=30
+2=..\REVIEW\Review.c
+t2=5
+3=Review_2.c
+t3=5
+Count=3
+[Units]
+Count=1
+1=Review_2 (main)
