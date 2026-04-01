@@ -14,14 +14,18 @@ Type=4
 buildcount=13
 
 [Opened Files]
-1=LEDCHOPTAT.c
-t1=50
-Count=1
+1=..\LCD\LC_SS1.c
+t1=1
+Count=2
+2=LEDCHOPTAT.c
+t2=41
+3=C:\Program Files (x86)\PICC\Drivers\LCD.C
+t3=33
 
 [ProjectLog]
 Days=1
 D1=01-04-2026
-D1_L=9
+D1_L=13
 D1_L1=[43510]Stopped Editing.
 TotalEdit=27
 TotalDebug=0
@@ -35,6 +39,10 @@ D1_L6=[43845]Started Editing.
 D1_L7=[44854]Stopped Editing.
 D1_L8=[56440]Started Editing.
 D1_L9=[56741]Stopped Editing.
+D1_L10=[57724]Started Editing.
+D1_L11=[58024]Stopped Editing.
+D1_L12=[59113]Started Editing.
+D1_L13=[59602]Project Closed.
 [Units]
 Count=1
 1=LEDCHOPTAT (main)

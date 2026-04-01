@@ -1,0 +1,28 @@
+[PROJECT]
+Target=LC_SS1.hex
+Processor_Text=PIC16F887
+CCSVersion=5.051
+Compiler=PCM
+[Target Data]
+FileList=LC_SS1.c
+[LC_SS1.c]
+Type=4
+[mru-list]
+1=LC_SS1.c
+
+[defines]
+buildcount=4
+
+[Opened Files]
+1=LC_SS1.c
+t1=1
+Count=1
+
+[ProjectLog]
+Days=1
+D1=01-04-2026
+D1_L=1
+D1_L1=[59672]Started Editing.
+[Units]
+Count=1
+1=LC_SS1 (main)
