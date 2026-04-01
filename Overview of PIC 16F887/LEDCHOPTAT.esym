@@ -1,10 +1,10 @@
-F N "MAIN" 0 31 ""
-D G "__PCM__" 0 49 ""5.051""
-D G "__DEVICE__" 0 49 "887"
-D G "__DATE__" 0 49 ""01-Apr-26""
-D G "__TIME__" 0 49 ""12:02:26""
-D G "_UNICODE" 0 49 ""?""
-D G "__EVAL" 0 49 ""?"" "!#INCLUDE <16F887.H> // KHAI BAO THU VIEN"
+F N "MAIN" 0 58 ""
+D G "__PCM__" 0 78 ""5.051""
+D G "__DEVICE__" 0 78 "887"
+D G "__DATE__" 0 78 ""01-Apr-26""
+D G "__TIME__" 0 78 ""12:22:35""
+D G "_UNICODE" 0 78 ""?""
+D G "__EVAL" 0 78 ""?"" "!BAI TAP CAU A"
 c L "set_tris_a" 1 1 6 "FUNCTION"
 f N "set_tris_a" 1 39 ""
 v L "value" 1 39 "int8" `54 
@@ -1111,9 +1111,10 @@ d G "INT_RB4" 1 767 "0x1100B08"
 d G "INT_RB5" 1 768 "0x1200B08"
 d G "INT_RB6" 1 769 "0x1400B08"
 d G "INT_RB7" 1 770 "0x1800B08"
-V G "I" 0 29 "int8" `600 
-F N "MAIN" 0 31 ""
-F G "MAIN" 0 31 "void()" `601 
+V G "I" 0 55 "int8" `600 
+V G "x" 0 56 "int8" `601 
+F N "MAIN" 0 58 ""
+F G "MAIN" 0 58 "void()" `602 
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep_ulpwu" 1 0

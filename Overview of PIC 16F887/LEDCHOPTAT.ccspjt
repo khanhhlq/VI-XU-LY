@@ -11,20 +11,17 @@ Type=4
 1=LEDCHOPTAT.c
 
 [defines]
-buildcount=8
+buildcount=13
 
 [Opened Files]
 1=LEDCHOPTAT.c
-t1=17
+t1=50
 Count=1
-[Units]
-Count=1
-1=LEDCHOPTAT (main)
 
 [ProjectLog]
 Days=1
 D1=01-04-2026
-D1_L=4
+D1_L=9
 D1_L1=[43510]Stopped Editing.
 TotalEdit=27
 TotalDebug=0
@@ -33,3 +30,11 @@ D1_D=0
 D1_L2=[43510]Project Closed.
 D1_L3=[43518]Project Opened.
 D1_L4=[43586]Project Closed.
+D1_L5=[43829]Project Opened.
+D1_L6=[43845]Started Editing.
+D1_L7=[44854]Stopped Editing.
+D1_L8=[56440]Started Editing.
+D1_L9=[56741]Stopped Editing.
+[Units]
+Count=1
+1=LEDCHOPTAT (main)
