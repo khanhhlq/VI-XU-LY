@@ -11,35 +11,45 @@ Type=4
 1=Review.c
 
 [defines]
-buildcount=21
+buildcount=22
 
 [ProjectLog]
 Days=1
 D1=01-04-2026
-D1_L=10
+D1_L=20
 D1_L1=[69558]Started Editing.
 D1_L2=[70449]Stopped Editing.
 D1_L3=[70456]Started Editing.
 D1_L4=[73667]Stopped Editing.
 D1_L5=[75714]Started Editing.
 D1_L6=[75716]Stopped Editing.
-TotalEdit=59
+TotalEdit=68
 TotalDebug=0
-D1_E=59
+D1_E=68
 D1_D=0
 D1_L7=[75716]Project Closed.
 D1_L8=[75891]Project Opened.
 D1_L9=[75893]Project Closed.
 D1_L10=[75895]Project Opened.
+D1_L11=[76636]Started Editing.
+D1_L12=[76936]Stopped Editing.
+D1_L13=[79022]Started Editing.
+D1_L14=[79322]Stopped Editing.
+D1_L15=[79793]Started Editing.
+D1_L16=[80167]Project Closed.
+D1_L17=[81085]Project Opened.
+D1_L18=[81096]Started Editing.
+D1_L19=[81595]Stopped Editing.
+D1_L20=[81595]Project Closed.
 
 [Opened Files]
-1=..\EXERCISE\EX4\EX4.c
-t1=1
-2=..\EXERCISE\EX5\EX5.c
-t2=48
+1=Review.c
+t1=41
+2=..\REVIEW_1\Review_1.c
+t2=41
 3=Review.c
 t3=48
-Count=3
+Count=2
 [Units]
 Count=1
 1=Review (main)

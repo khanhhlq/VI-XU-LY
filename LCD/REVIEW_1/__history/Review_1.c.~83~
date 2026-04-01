@@ -1,0 +1,76 @@
+#INCLUDE <16F887.H>
+#FUSES HS, PUT, NOWDT, NOLVP, NOPROTECT
+#USE DELAY(CLOCK=20M)
+
+#define LCD_ENABLE_PIN  PIN_D0
+#define LCD_RS_PIN      PIN_D1
+#define LCD_RW_PIN      PIN_D2
+#define LCD_DATA4       PIN_D4
+#define LCD_DATA5       PIN_D5
+#define LCD_DATA6       PIN_D6
+#define LCD_DATA7       PIN_D7
+#define ON_OFF          PIN_E0
+#define ADJ             PIN_E1
+
+#INCLUDE <LCD.C>
+
+CONST UNSIGNED CHAR MA7DOAN[10] = {0xC0,0xF9,0xA4,0xB0,0x99,0x92,0x82,0xF8,0x80,0x90}; // mang led 7 doan
+
+UNSIGNED INT1 STATUS = 1; // ON/OFF
+
+UNSIGNED INT S_SET = 00;
+UNSIGNED INT S_DIS = 00;
+
+VOID MAIN(){
+   SET_TRIS_A(0X00);
+   SET_TRIS_B(0X00);
+   SET_TRIS_C(0X00);
+   SET_TRIS_D(0X00);
+   SET_TRIS_E(0XFF);
+
+   LCD_INIT();
+   
+   LCD_GOTOXY(1,1);
+   PRINTF(LCD_PUTC, "CAI DAT:      %02U", S_SET);
+   LCD_GOTOXY(1,2);
+   PRINTF(LCD_PUTC, "HIEN TAI:     %02U", S_DIS);
+   
+   OUTPUT_B(0XFF);
+   OUTPUT_C(0XFF);
+   
+   OUTPUT_LOW(PIN_A0);
+   
+   WHILE(TRUE){
+      OUTPUT_B(MA7DOAN[S_SET/10]);
+      OUTPUT_C(MA7DOAN[S_SET%10]); 
+      IF (!INPUT(ON_OFF)){
+         DELAY_MS(20);
+         IF (!INPUT(ON_OFF)){
+            STATUS = ~STATUS;
+            WHILE(!INPUT(ON_OFF));
+         }
+      }
+      
+      IF (STATUS){
+         IF (!INPUT(ADJ)){
+            DELAY_MS(20);
+            IF (!INPUT(ADJ)){
+               S_SET += 5;
+               IF (S_SET > 60) S_SET = 5;
+
+               WHILE(!INPUT(ADJ));
+            }
+         }
+      } ELSE{
+         S_DIS++;
+         DELAY_MS(1000);
+         IF (S_DIS > S_SET){
+            S_DIS = 0;
+            OUTPUT_HIGH(PIN_A0);
+            DELAY_MS(500);
+            OUTPUT_LOW(PIN_A0);
+            DELAY_MS(500);
+         }
+      }
+   }
+}

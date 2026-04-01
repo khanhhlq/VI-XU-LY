@@ -29,7 +29,7 @@ Page ROM  %  RAM    Vol Diff  Functions:
 0     70   9    6    852  6.2  lcd_init
 0     18   2    4    208  6.3  lcd_gotoxy
 0     44   5    1    354  4.7  lcd_putc
-0     14   2    0    170  2.1  @const637
+0     14   2    0             @const637
 0    281  35    1   1899  6.3  MAIN
 0      4   0    0             @const644
 0     86  11    4             @PSTRINGC7_624
@@ -49,16 +49,16 @@ Page ROM  %  RAM    Vol Diff  Functions:
  Inline         0             @cinit1
 
 Program metrics:
-    Functions               9
+    Functions               8
     Statements              164
     Comments                237
-    Volume (V)              7892
-    Difficulty (D)          37.8
-    Effort to implement (E) 297930
-    Time to implement (T)   4 hours, 36 minutes
+    Volume (V)              7503
+    Difficulty (D)          35.5
+    Effort to implement (E) 266138
+    Time to implement (T)   4 hours, 6 minutes
     Est Delivered Bugs (B)  1
     Cyclomatic Complexity   17
-    Maintainability (MI)    138
+    Maintainability (MI)    128
 
  Segment     Used  Free
 -----------  ----  ----
