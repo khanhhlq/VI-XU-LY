@@ -1,0 +1,47 @@
+//!#INCLUDE <16F887.H> // KHAI BAO THU VIEN
+//!#FUSES HS, PUT // XUNG NGOAI
+//!#USE DELAY(CLOCK=20M)
+//!
+//!VOID MAIN(){
+//!   SET_TRIS_D(0X00);
+//!   OUTPUT_D(0X81);
+//!   DELAY_MS(1000);
+//!
+//!   WHILE(TRUE){
+//!      OUTPUT_D(0XFF);
+//!      DELAY_MS(1000);
+//!
+//!      OUTPUT_D(0X00);
+//!      DELAY_MS(1000);
+//!      
+//!      OUTPUT_D(0XF0);
+//!      DELAY_MS(1000);
+//!      
+//!      OUTPUT_D(0X55);
+//!      DELAY_MS(1000);
+//!      
+//!   }
+//!}
+
+#INCLUDE <16F887.H> // KHAI BAO THU VIEN
+#FUSES INTRC // XUNG NOI
+#USE DELAY(CLOCK=8M)
+UNSiGNED INT8 I = 0;
+
+VOID MAIN(){
+   SET_TRIS_D(0X00);
+   
+   OUTPUT_D(0X00);
+   DELAY_MS(1000);
+
+   WHILE(TRUE){
+      FOR (I = 0; I <=2; I++){
+         OUTPUT_D(0XFF);
+         DELAY_MS(500);
+         OUTPUT_D(0X00);
+         DELAY_MS(500);
+      }
+      OUTPUT_D(0X81);
+      DELAY_MS(1000);
+   }
+}

@@ -1,0 +1,35 @@
+[PROJECT]
+Target=LEDCHOPTAT.hex
+Processor_Text=PIC16F887
+CCSVersion=5.051
+Compiler=PCM
+[Target Data]
+FileList=LEDCHOPTAT.c
+[LEDCHOPTAT.c]
+Type=4
+[mru-list]
+1=LEDCHOPTAT.c
+
+[defines]
+buildcount=8
+
+[Opened Files]
+1=LEDCHOPTAT.c
+t1=17
+Count=1
+[Units]
+Count=1
+1=LEDCHOPTAT (main)
+
+[ProjectLog]
+Days=1
+D1=01-04-2026
+D1_L=4
+D1_L1=[43510]Stopped Editing.
+TotalEdit=27
+TotalDebug=0
+D1_E=27
+D1_D=0
+D1_L2=[43510]Project Closed.
+D1_L3=[43518]Project Opened.
+D1_L4=[43586]Project Closed.

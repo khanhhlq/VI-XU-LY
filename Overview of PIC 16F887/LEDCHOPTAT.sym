@@ -1,0 +1,62 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+020     I
+021     MAIN.@SCRATCH1
+022     @delay_ms1.P1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+107.6   C1OUT
+108.6   C2OUT
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  @delay_ms1
+000018  @cinit1
+000018  MAIN
+000031  @cinit2
+
+Project Directory:
+    D:\Vi xu ly\Overview of PIC 16F887\
+
+Project Files:
+    LEDCHOPTAT.c                                            [01-Apr-26 12:02  CRC=DC275923]
+    C:\Program Files (x86)\PICC\Devices\16F887.H            [22-Oct-15 10:30  CRC=E224733F]
+
+Source signature=A0703FA1
+Program memory checksum=0000
+Program memory CRC=0000
+Hex file CRC=51AA
+
+Units:
+    LEDCHOPTAT (main)
+
+Compiler Settings:
+    Processor:      PIC16F887
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    XREF file:   LEDCHOPTAT.xsym
+    Errors:      LEDCHOPTAT.err
+    Ext Symbols: LEDCHOPTAT.esym
+    INHX8:       LEDCHOPTAT.hex
+    Symbols:     LEDCHOPTAT.sym
+    List:        LEDCHOPTAT.lst
+    Debug/COFF:  LEDCHOPTAT.cof
+    Project:     LEDCHOPTAT.ccspjt
+    Call Tree:   LEDCHOPTAT.tre
+    Statistics:  LEDCHOPTAT.STA

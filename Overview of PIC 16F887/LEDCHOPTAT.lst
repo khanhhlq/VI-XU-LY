@@ -1,0 +1,185 @@
+CCS PCM C Compiler, Version 5.051, 43599               01-Apr-26 12:02
+
+               Filename:   D:\Vi xu ly\Overview of PIC 16F887\LEDCHOPTAT.lst
+
+               ROM used:   108 words (1%)
+                           Largest free fragment is 2048
+               RAM used:   7 (2%) at main() level
+                           8 (2%) worst case
+               Stack used: 0 locations
+               Stack size: 8
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   018
+0003:  NOP
+.................... //!#INCLUDE <16F887.H> // KHAI BAO THU VIEN 
+.................... //!#FUSES HS, PUT // XUNG NGOAI 
+.................... //!#USE DELAY(CLOCK=20M) 
+.................... //! 
+.................... //!VOID MAIN(){ 
+.................... //!   SET_TRIS_D(0X00); 
+.................... //!   OUTPUT_D(0X81); 
+.................... //!   DELAY_MS(1000); 
+.................... //! 
+.................... //!   WHILE(TRUE){ 
+.................... //!      OUTPUT_D(0XFF); 
+.................... //!      DELAY_MS(1000); 
+.................... //! 
+.................... //!      OUTPUT_D(0X00); 
+.................... //!      DELAY_MS(1000); 
+.................... //!       
+.................... //!      OUTPUT_D(0XF0); 
+.................... //!      DELAY_MS(1000); 
+.................... //!       
+.................... //!      OUTPUT_D(0X55); 
+.................... //!      DELAY_MS(1000); 
+.................... //!       
+.................... //!   } 
+.................... //!} 
+....................  
+.................... #INCLUDE <16F887.H> // KHAI BAO THU VIEN 
+.................... //////////// Standard Header file for the PIC16F887 device //////////////// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... ////        (C) Copyright 1996, 2014 Custom Computer Services          //// 
+.................... //// This source code may only be used by licensed users of the CCS C  //// 
+.................... //// compiler.  This source code may only be distributed to other      //// 
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction //// 
+.................... //// or distribution is permitted without written permission.          //// 
+.................... //// Derivative programs created using this software in object code    //// 
+.................... //// form are not restricted in any way.                               //// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... #device PIC16F887 
+....................  
+.................... #list 
+....................  
+.................... #FUSES INTRC // XUNG NOI 
+.................... #USE DELAY(CLOCK=8M) 
+0004:  MOVLW  22
+0005:  MOVWF  04
+0006:  BCF    03.7
+0007:  MOVF   00,W
+0008:  BTFSC  03.2
+0009:  GOTO   017
+000A:  MOVLW  02
+000B:  MOVWF  78
+000C:  CLRF   77
+000D:  DECFSZ 77,F
+000E:  GOTO   00D
+000F:  DECFSZ 78,F
+0010:  GOTO   00C
+0011:  MOVLW  97
+0012:  MOVWF  77
+0013:  DECFSZ 77,F
+0014:  GOTO   013
+0015:  DECFSZ 00,F
+0016:  GOTO   00A
+0017:  RETURN
+.................... UNSiGNED INT8 I = 0; 
+....................  
+.................... VOID MAIN(){ 
+0018:  MOVF   03,W
+0019:  ANDLW  1F
+001A:  MOVWF  03
+001B:  MOVLW  71
+001C:  BSF    03.5
+001D:  MOVWF  0F
+001E:  CLRF   10
+001F:  MOVF   0F,W
+0020:  BCF    03.5
+0021:  CLRF   20
+0022:  BSF    03.5
+0023:  BSF    03.6
+0024:  MOVF   09,W
+0025:  ANDLW  C0
+0026:  MOVWF  09
+0027:  BCF    03.6
+0028:  BCF    1F.4
+0029:  BCF    1F.5
+002A:  MOVLW  00
+002B:  BSF    03.6
+002C:  MOVWF  08
+002D:  BCF    03.5
+002E:  CLRF   07
+002F:  CLRF   08
+0030:  CLRF   09
+0031:  BCF    03.7
+....................    SET_TRIS_D(0X00); 
+0032:  MOVLW  00
+0033:  BSF    03.5
+0034:  BCF    03.6
+0035:  MOVWF  08
+....................     
+....................    OUTPUT_D(0X00); 
+0036:  CLRF   08
+0037:  BCF    03.5
+0038:  CLRF   08
+....................    DELAY_MS(1000); 
+0039:  MOVLW  04
+003A:  MOVWF  21
+003B:  MOVLW  FA
+003C:  MOVWF  22
+003D:  CALL   004
+003E:  DECFSZ 21,F
+003F:  GOTO   03B
+....................  
+....................    WHILE(TRUE){ 
+....................       FOR (I = 0; I <=2; I++){ 
+0040:  CLRF   20
+0041:  MOVF   20,W
+0042:  SUBLW  02
+0043:  BTFSS  03.0
+0044:  GOTO   05E
+....................          OUTPUT_D(0XFF); 
+0045:  BSF    03.5
+0046:  CLRF   08
+0047:  MOVLW  FF
+0048:  BCF    03.5
+0049:  MOVWF  08
+....................          DELAY_MS(500); 
+004A:  MOVLW  02
+004B:  MOVWF  21
+004C:  MOVLW  FA
+004D:  MOVWF  22
+004E:  CALL   004
+004F:  DECFSZ 21,F
+0050:  GOTO   04C
+....................          OUTPUT_D(0X00); 
+0051:  BSF    03.5
+0052:  CLRF   08
+0053:  BCF    03.5
+0054:  CLRF   08
+....................          DELAY_MS(500); 
+0055:  MOVLW  02
+0056:  MOVWF  21
+0057:  MOVLW  FA
+0058:  MOVWF  22
+0059:  CALL   004
+005A:  DECFSZ 21,F
+005B:  GOTO   057
+005C:  INCF   20,F
+005D:  GOTO   041
+....................       } 
+....................       OUTPUT_D(0X81); 
+005E:  BSF    03.5
+005F:  CLRF   08
+0060:  MOVLW  81
+0061:  BCF    03.5
+0062:  MOVWF  08
+....................       DELAY_MS(1000); 
+0063:  MOVLW  04
+0064:  MOVWF  21
+0065:  MOVLW  FA
+0066:  MOVWF  22
+0067:  CALL   004
+0068:  DECFSZ 21,F
+0069:  GOTO   065
+006A:  GOTO   040
+....................    } 
+.................... } 
+006B:  SLEEP
+
+Configuration Fuses:
+   Word  1: 2FE5   INTRC NOWDT PUT MCLR NOPROTECT NOCPD BROWNOUT IESO FCMEN NOLVP NODEBUG
+   Word  2: 0700   BORV40 NOWRT
