@@ -26,5 +26,7 @@ Count=1
 [ProjectLog]
 Days=1
 D1=01-04-2026
-D1_L=1
+D1_L=3
 D1_L1=[63435]Project Closed.
+D1_L2=[75893]Project Opened.
+D1_L3=[75895]Project Closed.

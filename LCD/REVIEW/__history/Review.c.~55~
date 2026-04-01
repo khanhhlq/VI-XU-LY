@@ -1,0 +1,88 @@
+#INCLUDE <16F887.H>
+#FUSES HS, PUT, NOWDT, NOLVP, NOPROTECT
+#USE DELAY(CLOCK=20M)
+
+#define LCD_ENABLE_PIN  PIN_D0
+#define LCD_RS_PIN      PIN_D1
+#define LCD_RW_PIN      PIN_D2
+#define LCD_DATA4       PIN_D4
+#define LCD_DATA5       PIN_D5
+#define LCD_DATA6       PIN_D6
+#define LCD_DATA7       PIN_D7
+#define ON_OFF          PIN_E0
+#define CHANNEL         PIN_E1
+
+#INCLUDE <LCD.C>
+
+CONST UNSIGNED CHAR MA7DOAN[10] = {0xC0,0xF9,0xA4,0xB0,0x99,0x92,0x82,0xF8,0x80,0x90}; // mang led 7 doan
+
+INT1 STATUS = 1; // ON/OFF
+UNSIGNED INT8 MODE = 1; // CHANNEL
+
+VOID MAIN(){
+   SET_TRIS_D(0);
+   SET_TRIS_E(0XFF);
+   
+   LCD_INIT();
+   LCD_GOTOXY(6,1);
+   LCD_PUTC("NHAN ON");
+   LCD_GOTOXY(4,2);
+   LCD_PUTC("DE BAT DAU");
+   
+   WHILE(TRUE){
+      IF (!INPUT(ON_OFF)){
+         DELAY_MS(20);
+         IF(!INPUT(ON_OFF)){
+            STATUS = ~STATUS;
+            LCD_GOTOXY(1,1);
+            LCD_PUTC("                ");
+            LCD_GOTOXY(1,2);
+            LCD_PUTC("                ");
+            WHILE(!INPUT(ON_OFF));
+         }  
+      }
+      
+      IF (!STATUS){
+         IF (!INPUT(CHANNEL)){
+            DELAY_MS(20);
+            IF (!INPUT(CHANNEL)){
+               LCD_GOTOXY(1,1);
+               LCD_PUTC("                ");
+               LCD_GOTOXY(1,2);
+               LCD_PUTC("                ");
+               IF (MODE == 3) MODE = 1; ELSE MODE++;
+               WHILE (!INPUT(CHANNEL));
+            }
+         }
+         
+         IF (MODE == 1){
+            LCD_GOTOXY(1,1);
+            LCD_PUTC("VIETNAMESE");
+            LCD_GOTOXY(1,2);
+            LCD_PUTC("XIN CHAO");
+         } ELSE IF (MODE == 2){
+            LCD_GOTOXY(1,1);
+            LCD_PUTC("ENGLISH");
+            LCD_GOTOXY(1,2);
+            LCD_PUTC("HELLO");
+         } ELSE IF (MODE == 3){
+            LCD_GOTOXY(1,1);
+            LCD_PUTC("GERMANY");
+            LCD_GOTOXY(1,2);
+            LCD_PUTC("HALLO");
+         }
+         
+         OUTPUT_B(MA7DOAN[MODE]);
+      }
+      ELSE {
+         LCD_INIT();
+         LCD_GOTOXY(6,1);
+         LCD_PUTC("NHAN ON");
+         LCD_GOTOXY(4,2);
+         LCD_PUTC("DE BAT DAU");
+         
+         OUTPUT_B(0XFF);
+      }
+   }
+
+}
