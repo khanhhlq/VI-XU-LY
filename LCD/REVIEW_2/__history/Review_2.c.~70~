@@ -2,15 +2,12 @@
 #FUSES HS, PUT, NOWDT, NOLVP, NOPROTECT
 #USE DELAY(CLOCK=20M)
 
-#define START         PIN_E0
+#define START        PIN_E0
 #define STOP         PIN_E1
 
 CONST UNSIGNED CHAR MA7DOAN[10] = {0xC0,0xF9,0xA4,0xB0,0x99,0x92,0x82,0xF8,0x80,0x90}; // mang led 7 doan
 
-
-
-UNSIGNED INT1 STATUS_START = 1;
-UNSIGNED INT1 STATUS_STOP = 1;
+UNSIGNED INT1 STATUS = 1;
 UNSIGNED INT8 SECOND = 0;
 
 VOID MAIN(){
@@ -20,25 +17,40 @@ VOID MAIN(){
 
    OUTPUT_B(MA7DOAN[0]);
    OUTPUT_C(MA7DOAN[0]);
+   STATUS = 0;
    
    WHILE(TRUE){
-      OUTPUT_B(MA7DOAN[SECOND/10]);
-      OUTPUT_C(MA7DOAN[SECOND%10]);
       
-      IF(!INPUT(START)){
+      IF (!INPUT(START)){
          DELAY_MS(20);
-         IF(!INPUT(START)){
-            STATUS_START = ~STATUS_START;
+         IF (!INPUT(START)){
+            STATUS = 0;
             WHILE(!INPUT(START));
          }
       }
       
-      IF(!INPUT(STOP)){
+      IF (!INPUT(STOP)){
          DELAY_MS(20);
          IF(!INPUT(STOP)){
-            STATUS_START = ~STATUS_START;
-            WHILE(!INPUT(START));
+            STATUS = 1;
+            WHILE(!INPUT(STOP));
          }
+      
       }
+      
+      IF (STATUS == 0){
+         SECOND++;
+         IF (SECOND > 99) SECOND = 1;
+      }
+      
+      OUTPUT_B(MA7DOAN[SECOND/10]);
+      OUTPUT_C(MA7DOAN[SECOND%10]);
+      DELAY_MS(500);
+    
+            
+      IF (STATUS == 1){
+         WHILE(INPUT(START==1));
+      }
+      
    }
 }

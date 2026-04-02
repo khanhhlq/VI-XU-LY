@@ -29,21 +29,21 @@ ROM Allocation:
 000008  MA7DOAN.data
 000012  @DIV88
 000027  @delay_ms1
-00003D  @cinit1
-00003D  MAIN
-000053  @cinit2
+00003B  @cinit1
+00003B  MAIN
+000051  @cinit2
 
 Project Directory:
     D:\VI-XU-LY\LCD\REVIEW_2\
 
 Project Files:
-    Review_2.c                                              [02-Apr-26 01:09  CRC=4FB53F16]
+    Review_2.c                                              [02-Apr-26 11:37  CRC=0DE31880]
     C:\Program Files (x86)\PICC\Devices\16F887.H            [22-Oct-15 10:30  CRC=E224733F]
 
-Source signature=13FE2594
+Source signature=D22BFEFE
 Program memory checksum=0000
 Program memory CRC=0000
-Hex file CRC=78F5
+Hex file CRC=40C6
 
 Units:
     Review_2 (main)
