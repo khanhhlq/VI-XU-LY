@@ -1,0 +1,140 @@
+CCS PCM C Compiler, Version 5.051, 43599               02-Apr-26 23:19
+
+               Filename:   D:\VI-XU-LY\LED 7 SEG - BUTTON\VD1\VD1.lst
+
+               ROM used:   92 words (1%)
+                           Largest free fragment is 2048
+               RAM used:   7 (2%) at main() level
+                           8 (2%) worst case
+               Stack used: 0 locations
+               Stack size: 8
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   028
+0003:  NOP
+.................... #INCLUDE <16F887.H> 
+.................... //////////// Standard Header file for the PIC16F887 device //////////////// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... ////        (C) Copyright 1996, 2014 Custom Computer Services          //// 
+.................... //// This source code may only be used by licensed users of the CCS C  //// 
+.................... //// compiler.  This source code may only be distributed to other      //// 
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction //// 
+.................... //// or distribution is permitted without written permission.          //// 
+.................... //// Derivative programs created using this software in object code    //// 
+.................... //// form are not restricted in any way.                               //// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... #device PIC16F887 
+0004:  BCF    0A.0
+0005:  BCF    0A.1
+0006:  BCF    0A.2
+0007:  ADDWF  02,F
+0008:  RETLW  C0
+0009:  RETLW  F9
+000A:  RETLW  A4
+000B:  RETLW  B0
+000C:  RETLW  99
+000D:  RETLW  92
+000E:  RETLW  82
+000F:  RETLW  F8
+0010:  RETLW  80
+0011:  RETLW  90
+....................  
+.................... #list 
+....................  
+.................... #FUSES HS, PUT 
+.................... #USE DELAY(CLOCK=20M) 
+0012:  MOVLW  22
+0013:  MOVWF  04
+0014:  BCF    03.7
+0015:  MOVF   00,W
+0016:  BTFSC  03.2
+0017:  GOTO   025
+0018:  MOVLW  06
+0019:  MOVWF  78
+001A:  CLRF   77
+001B:  DECFSZ 77,F
+001C:  GOTO   01B
+001D:  DECFSZ 78,F
+001E:  GOTO   01A
+001F:  MOVLW  7B
+0020:  MOVWF  77
+0021:  DECFSZ 77,F
+0022:  GOTO   021
+0023:  DECFSZ 00,F
+0024:  GOTO   018
+0025:  BCF    0A.3
+0026:  BCF    0A.4
+0027:  GOTO   058 (RETURN)
+....................  
+.................... CONST UNSIGNED CHAR MA7DOAN[10] = {0xC0,0xF9,0xA4,0xB0,0x99,0x92,0x82,0xF8,0x80,0x90}; 
+....................  
+.................... UNSIGNED INT8 COUNT = 0; 
+....................  
+.................... VOID MAIN(){ 
+0028:  MOVF   03,W
+0029:  ANDLW  1F
+002A:  MOVWF  03
+002B:  CLRF   20
+002C:  BSF    03.5
+002D:  BSF    03.6
+002E:  MOVF   09,W
+002F:  ANDLW  C0
+0030:  MOVWF  09
+0031:  BCF    03.6
+0032:  BCF    1F.4
+0033:  BCF    1F.5
+0034:  MOVLW  00
+0035:  BSF    03.6
+0036:  MOVWF  08
+0037:  BCF    03.5
+0038:  CLRF   07
+0039:  CLRF   08
+003A:  CLRF   09
+003B:  BCF    03.7
+....................    SET_TRIS_D(0X00); 
+003C:  MOVLW  00
+003D:  BSF    03.5
+003E:  BCF    03.6
+003F:  MOVWF  08
+....................    OUTPUT_D(MA7DOAN[0]); 
+0040:  CLRF   08
+0041:  MOVLW  C0
+0042:  BCF    03.5
+0043:  MOVWF  08
+....................     
+....................    WHILE(TRUE){ 
+....................       OUTPUT_D(MA7DOAN[COUNT]); 
+0044:  MOVF   20,W
+0045:  CALL   004
+0046:  MOVWF  21
+0047:  BSF    03.5
+0048:  CLRF   08
+0049:  BCF    03.5
+004A:  MOVF   21,W
+004B:  MOVWF  08
+....................       IF (COUNT == 9) COUNT = 0; ELSE COUNT++; 
+004C:  MOVF   20,W
+004D:  SUBLW  09
+004E:  BTFSS  03.2
+004F:  GOTO   052
+0050:  CLRF   20
+0051:  GOTO   053
+0052:  INCF   20,F
+....................       DELAY_MS(500); 
+0053:  MOVLW  02
+0054:  MOVWF  21
+0055:  MOVLW  FA
+0056:  MOVWF  22
+0057:  GOTO   012
+0058:  DECFSZ 21,F
+0059:  GOTO   055
+005A:  GOTO   044
+....................    } 
+.................... } 
+005B:  SLEEP
+
+Configuration Fuses:
+   Word  1: 2FE2   HS NOWDT PUT MCLR NOPROTECT NOCPD BROWNOUT IESO FCMEN NOLVP NODEBUG
+   Word  2: 0700   BORV40 NOWRT

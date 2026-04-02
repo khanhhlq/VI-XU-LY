@@ -1,0 +1,24 @@
+[PROJECT]
+Target=VD1.hex
+Processor_Text=PIC16F887
+CCSVersion=5.051
+Compiler=PCM
+[Target Data]
+FileList=VD1.c
+[VD1.c]
+Type=4
+[mru-list]
+1=VD1.c
+
+[defines]
+buildcount=5
+
+[Opened Files]
+1=..\..\LCD\REVIEW_2\Review_2.c
+t1=1
+2=VD1.c
+t2=1
+Count=2
+[Units]
+Count=1
+1=VD1 (main)

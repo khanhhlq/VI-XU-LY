@@ -1,0 +1,2 @@
+VÍ DỤ: VIẾT CHƯƠNG TRÌNH ĐẾM TỪ 0 ĐẾN 9, HIỂN THỊ LED 7 ĐOẠN ANODE CHUNG, KẾT NỐI PORT D
+--> CHO MỘT BIẾN NGẪU NHIÊN CHẠY TỪ 0 ĐẾN 9, ỨNG VỚI LẪN BIẾN THAY ĐỔI GIÁ TRỊ THÌ XUẤT MÃ GIÁ TRỊ ĐÓ SANG LED 7 ĐOẠN

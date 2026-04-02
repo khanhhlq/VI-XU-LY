@@ -16,14 +16,14 @@ buildcount=32
 [ProjectLog]
 Days=1
 D1=02-04-2026
-D1_L=11
+D1_L=21
 D1_L1=[1065]Started Editing.
 D1_L2=[3433]Stopped Editing.
 D1_L3=[4140]Started Editing.
 D1_L4=[4203]Stopped Editing.
-TotalEdit=36
+TotalEdit=45
 TotalDebug=0
-D1_E=36
+D1_E=45
 D1_D=0
 D1_L5=[4203]Project Closed.
 D1_L6=[36511]Project Opened.
@@ -32,15 +32,25 @@ D1_L8=[36515]Project Opened.
 D1_L9=[37041]Project Closed.
 D1_L10=[41545]Project Opened.
 D1_L11=[41550]Started Editing.
+D1_L12=[42049]Stopped Editing.
+D1_L13=[42049]Project Closed.
+D1_L14=[42095]Project Opened.
+D1_L15=[42232]Started Editing.
+D1_L16=[42532]Stopped Editing.
+D1_L17=[82732]Project Opened.
+D1_L18=[82979]Started Editing.
+D1_L19=[83353]Stopped Editing.
+D1_L20=[83686]Started Editing.
+D1_L21=[83762]Project Closed.
 
 [Opened Files]
 1=Review_2.c
-t1=20
-2=..\REVIEW\Review.c
-t2=5
+t1=1
+2=..\..\LED 7 SEG - BUTTON\VD1\VD1.c
+t2=1
 3=Review_2.c
 t3=5
-Count=1
+Count=2
 [Units]
 Count=1
 1=Review_2 (main)
